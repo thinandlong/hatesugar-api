@@ -21,4 +21,3 @@ data class PageResponseDto<T>(
     )
 }
 
-fun <T> Page<T>.wrapPage() = PageResponseDto(this)

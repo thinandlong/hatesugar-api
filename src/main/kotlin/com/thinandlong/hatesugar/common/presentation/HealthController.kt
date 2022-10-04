@@ -1,8 +1,8 @@
 package com.thinandlong.hatesugar.common.presentation
 
 import com.thinandlong.hatesugar.common.dto.HealthResponse
-import com.thinandlong.hatesugar.common.dto.ok
 import com.thinandlong.hatesugar.config.web.APPLICATION_JSON_UTF8_VALUE
+import com.thinandlong.hatesugar.extension.wrapOk
 import org.springframework.core.env.Environment
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
@@ -16,5 +16,5 @@ class HealthController(
     @GetMapping
     fun healthCheck() = HealthResponse(
         profiles = environment.activeProfiles.toList()
-    ).ok()
+    ).wrapOk()
 }
