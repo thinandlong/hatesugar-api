@@ -5,6 +5,6 @@ import org.springframework.stereotype.Service
 
 @Service
 class MemberService(
-    private val memwberRepository: MemberRepository
+    private val memberRepository: MemberRepository
 ) {
 }

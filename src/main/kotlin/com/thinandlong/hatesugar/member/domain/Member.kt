@@ -1,6 +1,7 @@
 package com.thinandlong.hatesugar.member.domain
 
 import com.thinandlong.hatesugar.common.domain.BaseEntity
+import com.thinandlong.hatesugar.member.domain.vo.Gender
 import com.thinandlong.hatesugar.member.domain.vo.LoginType
 import javax.persistence.Entity
 import javax.persistence.EnumType
@@ -19,4 +20,9 @@ class Member(
     var loginType: LoginType,
 
     val username: String,
+
+    val password: String,
+
+    @Enumerated(EnumType.STRING)
+    val gender: Gender
 ) : BaseEntity()
