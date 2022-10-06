@@ -24,5 +24,7 @@ class Member(
     val password: String,
 
     @Enumerated(EnumType.STRING)
-    val gender: Gender
+    val gender: Gender,
+
+    val age: Int
 ) : BaseEntity()

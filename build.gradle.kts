@@ -1,3 +1,4 @@
+import Build_gradle.DependencyVersion.APACHE_HTTP_CLIENT_VERSION
 import Build_gradle.DependencyVersion.KOTLIN_LOGGING_VERSION
 import Build_gradle.DependencyVersion.SWAGGER_VERSION
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -27,6 +28,7 @@ repositories {
 object DependencyVersion {
     const val KOTLIN_LOGGING_VERSION = "2.1.20"
     const val SWAGGER_VERSION = "2.10.5"
+    const val APACHE_HTTP_CLIENT_VERSION = "4.5.13"
 }
 
 dependencies {
@@ -49,6 +51,9 @@ dependencies {
 
     // kotlin logger
     implementation("io.github.microutils:kotlin-logging-jvm:$KOTLIN_LOGGING_VERSION")
+
+    // rest template
+    implementation("org.apache.httpcomponents:httpclient:$APACHE_HTTP_CLIENT_VERSION")
 }
 
 tasks.withType<KotlinCompile> {
