@@ -15,29 +15,29 @@ class Food(
 
     val name: String,
 
-    val totalCalories: Double,
+    val totalCalories: Double = 0.0,
 
     @Comment("탄수화물")
-    val carbohydrate: Float,
+    val carbohydrate: Float = 0f,
 
     @Comment("단백질")
-    val protein: Float,
+    val protein: Float = 0f,
 
     @Comment("지방")
-    val fat: Float,
+    val fat: Float = 0f,
 
     @Comment("당류")
-    val sugars: Float,
+    val sugars: Float = 0f,
 
     @Comment("나트륨")
-    val natrium: Float,
+    val natrium: Float = 0f,
 
     @Comment("콜레스트레롤")
-    val cholesterol: Float,
+    val cholesterol: Float = 0f,
 
     @Comment("포화지방산")
-    val saturatedFatty: Float,
+    val saturatedFatty: Float = 0f,
 
     @Comment("트랜스지방산")
-    val transFatty: Float
+    val transFatty: Float = 0f
 ) : BaseEntity()
