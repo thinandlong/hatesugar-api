@@ -1,4 +1,5 @@
 import Build_gradle.DependencyVersion.APACHE_HTTP_CLIENT_VERSION
+import Build_gradle.DependencyVersion.JWT_VERSION
 import Build_gradle.DependencyVersion.KOTLIN_LOGGING_VERSION
 import Build_gradle.DependencyVersion.SWAGGER_VERSION
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -26,12 +27,17 @@ repositories {
 }
 
 object DependencyVersion {
-    const val KOTLIN_LOGGING_VERSION = "2.1.20"
+    const val KOTLIN_LOGGING_VERSION = "3.0.0"
     const val SWAGGER_VERSION = "2.10.5"
     const val APACHE_HTTP_CLIENT_VERSION = "4.5.13"
+    const val JWT_VERSION = "4.0.0"
 }
 
 dependencies {
+    implementation("org.springframework.boot:spring-boot-starter-security")
+    
+    //https://github.com/auth0/java-jwt
+    implementation("com.auth0:java-jwt:${JWT_VERSION}")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     implementation("org.springframework.boot:spring-boot-starter-web")
